@@ -1,0 +1,3 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:valtyr-naut/core.git
