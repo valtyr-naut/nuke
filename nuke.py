@@ -3,7 +3,7 @@ from selenium import webdriver as wd
 from time import sleep
 from enum import Enum
 import json
-from core import core
+import core
 
 BANNER:str=r"""
  ________   ___  ___  ___  __    _______      
