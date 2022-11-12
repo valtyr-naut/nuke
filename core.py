@@ -18,14 +18,14 @@ def create_exception(Class:Enum,function:str,parameters:list,message:str)->Excep
         print(exception)
 
 def type_check(variable:any,expect:any)->bool:
-    if type(variable) == type(expect):
+    if type(variable) == expect:
         return True
     else:
         create_exception(Class=Class.WARN,function="type_check()",parameters=[variable,expect],message="Variable failed type check!")
         return False
 
 def type_require(variable:any,expect:any)->bool:
-    if type(variable) == type(expect):
+    if type(variable) == expect:
         return True
     else:
         create_exception(Class=Class.FATAL,function="type_require()",parameters=[variable,expect],message="Variable failed type requirement!")   
@@ -40,7 +40,7 @@ def read(path:str,arg:str)->any:
     type_require(path,str)
     type_require(arg,str)
     try:
-        file = open(path,type)
+        file = open(path,arg)
         data:str = file.read()
         file.close()
     except Exception as exception:

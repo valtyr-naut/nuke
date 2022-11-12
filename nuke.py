@@ -36,7 +36,7 @@ class payload(Enum):
 
 if __name__=="__main__":
     print(BANNER)
-    print(core.read(path="persistence.json",arg='r'))
+    print(core.read(path="persistence.json",arg="r"))
 
 
 
